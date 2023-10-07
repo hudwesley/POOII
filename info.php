@@ -8,9 +8,8 @@ try {
     $pdo = new PDO("pgsql:host=$host;port=$port", $user, $password);
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     
-    $sql = "SELECT * FROM sua_tabela"; 
+    $sql = "SELECT * FROM janio.aluno"; 
     $stmt = $pdo->query($sql);
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
